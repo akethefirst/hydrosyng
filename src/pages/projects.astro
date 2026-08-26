@@ -1,0 +1,73 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+
+const projects = [
+  { img: 'project-1.jpg', tag: 'Fuels', title: 'Bulk Fuel Supply Contract', text: 'Reliable scheduled supply of AGO and PMS to an industrial customer, backed by disciplined logistics and quality assurance.' },
+  { img: 'project-2.jpg', tag: 'Gas & LPG', title: 'LPG Distribution Rollout', text: 'Safe, consistent LPG distribution to commercial and household customers across the region.' },
+  { img: 'project-3.jpg', tag: 'Logistics', title: 'Haulage & Depot Handling', text: 'Bulk haulage and depot handling operations delivering product on schedule with full HSE compliance.' },
+  { img: 'project-4.jpg', tag: 'Engineering', title: 'Facility Upgrade & Maintenance', text: 'Engineering, procurement and maintenance works delivered to recognised standards and on time.' },
+  { img: 'project-5.jpg', tag: 'Retail', title: 'Retail Station Supply', text: 'Dependable product supply partnership keeping a branded retail network stocked and running.' },
+  { img: 'project-6.jpg', tag: 'Power', title: 'Energy & Power Solutions', text: 'Power and energy solutions helping a client cut downtime and improve reliability.' }
+];
+---
+<Base
+  title="Projects — Hydrosyng Oil & Gas Ltd"
+  description="Selected projects and engagements delivered by Hydrosyng Oil & Gas Ltd across fuels supply, gas & LPG, logistics and engineering services."
+  current="projects"
+  path="/projects"
+>
+  <PageHero
+    title="Our Projects"
+    subtitle="A selection of the work we deliver across fuels, gas, logistics and engineering."
+    image="/img/banner-projects.jpg"
+    crumb="Projects"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">Selected Work</span>
+        <h2>Delivering value across the value chain</h2>
+        <p>Representative examples of Hydrosyng engagements. Client details are available on request.</p>
+      </div>
+      <div class="grid grid-3">
+        {projects.map((p, i) => (
+          <article class:list={["card", "media-card", "reveal", i % 3 === 1 && "d1", i % 3 === 2 && "d2"]}>
+            <div class="media"><img src={`/img/${p.img}`} alt={p.title} loading="lazy" /><span class="tag">{p.tag}</span></div>
+            <div class="body">
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+              <a class="arrow-link" href="/contact">Enquire <Icon name="arrow" /></a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section stat-band">
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="stat-item reveal"><strong><span data-count="100">0</span><span class="suffix">%</span></strong><span>Commitment to safety</span></div>
+        <div class="stat-item reveal d1"><strong>24/7</strong><span>Supply availability</span></div>
+        <div class="stat-item reveal d2"><strong><span data-count="4">0</span></strong><span>Service divisions</span></div>
+        <div class="stat-item reveal d3"><strong>2014</strong><span>Trusted since</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Have a project in mind?</h2>
+        <p>Tell us your requirements and we'll put together the right supply or engineering solution.</p>
+        <div class="btn-row center">
+          <a href="/contact" class="btn btn-white btn-lg">Start a Conversation</a>
+          <a href="/services" class="btn btn-ghost-light btn-lg">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

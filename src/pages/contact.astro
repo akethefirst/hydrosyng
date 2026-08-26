@@ -1,0 +1,108 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site.js';
+---
+<Base
+  title="Contact Us — Hydrosyng Oil & Gas Ltd"
+  description="Get in touch with Hydrosyng Oil & Gas Ltd for fuels supply, gas & LPG, haulage & logistics or engineering & energy services. Call, email or send us a message."
+  current="contact"
+  path="/contact"
+>
+  <PageHero
+    title="Get in Touch"
+    subtitle="Tell us what you need — fuels, gas & LPG, logistics or engineering — and our team will respond promptly."
+    image="/img/banner-contact.jpg"
+    crumb="Contact"
+  />
+
+  <!-- INFO TILES -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3" style="margin-bottom:52px">
+        <div class="info-tile reveal">
+          <div class="it-icon"><Icon name="pin" /></div>
+          <div><h3>Head Office</h3><p>{site.addressFull}</p></div>
+        </div>
+        <div class="info-tile reveal d1">
+          <div class="it-icon"><Icon name="phone" /></div>
+          <div><h3>Call Us</h3><p><a href={"tel:" + site.phoneHref}>{site.phoneDisplay}</a></p><p>Mon–Fri, 8am–5pm</p></div>
+        </div>
+        <div class="info-tile reveal d2">
+          <div class="it-icon"><Icon name="mail" /></div>
+          <div><h3>Email Us</h3><p><a href={"mailto:" + site.email}>{site.email}</a></p></div>
+        </div>
+      </div>
+
+      <div class="split" style="align-items:flex-start">
+        <div class="reveal">
+          <span class="eyebrow">Send a Message</span>
+          <h2>We'd love to hear from you</h2>
+          <p style="color:var(--muted)">Fill in the form and your message will open in your email app, ready to send to our team. Fields marked <span style="color:var(--accent)">*</span> are required.</p>
+          <ul class="check-list" style="margin-top:22px">
+            <li><Icon name="check-circle" /><span><strong>Fast response</strong>we aim to reply within one business day</span></li>
+            <li><Icon name="check-circle" /><span><strong>Talk to a real person</strong>no call centres, no run-around</span></li>
+            <li><Icon name="check-circle" /><span><strong>Nationwide service</strong>supply and services across Nigeria</span></li>
+          </ul>
+        </div>
+
+        <div class="reveal d1">
+          <div class="form-card">
+            <div class="form-status"></div>
+            <form data-validate data-mode="mailto" data-mailto={site.email} novalidate>
+              <div class="grid grid-2" style="gap:0 20px">
+                <div class="field">
+                  <label for="name">Full Name <span class="req">*</span></label>
+                  <input id="name" name="name" type="text" required placeholder="Your name" />
+                  <span class="err-msg">Please enter your name.</span>
+                </div>
+                <div class="field">
+                  <label for="email">Email <span class="req">*</span></label>
+                  <input id="email" name="email" type="email" required placeholder="you@example.com" />
+                  <span class="err-msg">Please enter a valid email.</span>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" placeholder="+234 ..." />
+                </div>
+                <div class="field">
+                  <label for="company">Company</label>
+                  <input id="company" name="company" type="text" placeholder="Company name" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="subject">Service of Interest</label>
+                <select id="subject" name="subject">
+                  <option value="">Select a service…</option>
+                  <option>Fuels &amp; Petroleum Products</option>
+                  <option>Gas &amp; LPG</option>
+                  <option>Haulage &amp; Logistics</option>
+                  <option>Engineering &amp; Energy Services</option>
+                  <option>General Enquiry</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Message <span class="req">*</span></label>
+                <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
+                <span class="err-msg">Please enter a message.</span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Message <Icon name="send" /></button>
+              <p class="form-note" style="margin-top:14px">Prefer email? Write to <a href={"mailto:" + site.email}>{site.email}</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {site.mapEmbed && (
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="map-wrap reveal">
+          <iframe src={site.mapEmbed} loading="lazy" title="Hydrosyng office location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

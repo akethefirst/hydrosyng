@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site.js';
+
+const posts = [
+  { img: 'news-1.jpg', tag: 'Company', date: 'Coming soon', title: 'Hydrosyng expands fuel distribution capacity', text: 'A look at how we are scaling reliable petroleum product supply for our growing customer base.' },
+  { img: 'news-2.jpg', tag: 'Gas & LPG', date: 'Coming soon', title: 'Bringing cleaner LPG to more households', text: 'Our push to make safe, affordable cooking gas more widely available across communities.' },
+  { img: 'news-3.jpg', tag: 'HSE', date: 'Coming soon', title: 'Safety milestone: our target-zero culture', text: 'How disciplined HSE practices keep our people, customers and communities safe.' },
+  { img: 'news-4.jpg', tag: 'Logistics', date: 'Coming soon', title: 'Investing in a safer, smarter fleet', text: 'Fleet and logistics improvements that raise reliability and cut emissions.' },
+  { img: 'news-5.jpg', tag: 'Community', date: 'Coming soon', title: 'Supporting the communities we serve', text: 'Our commitment to local content, local jobs and community value.' },
+  { img: 'news-6.jpg', tag: 'Engineering', date: 'Coming soon', title: 'Powering operations with energy services', text: 'Engineering and power solutions helping customers improve uptime and efficiency.' }
+];
+---
+<Base
+  title="News & Media — Hydrosyng Oil & Gas Ltd"
+  description="Latest news, updates and media from Hydrosyng Oil & Gas Ltd — company milestones, HSE, community and energy-sector insights."
+  current="news"
+  path="/news"
+>
+  <PageHero
+    title="News & Media"
+    subtitle="Updates, milestones and insights from across Hydrosyng Oil & Gas Ltd."
+    image="/img/banner-news.jpg"
+    crumb="News"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        {posts.map((p, i) => (
+          <article class:list={["card", "media-card", "reveal", i % 3 === 1 && "d1", i % 3 === 2 && "d2"]}>
+            <div class="media"><img src={`/img/${p.img}`} alt={p.title} loading="lazy" /><span class="tag">{p.tag}</span></div>
+            <div class="body">
+              <div class="meta"><span><Icon name="calendar" />{p.date}</span></div>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+              <span class="arrow-link">Read more <Icon name="arrow" /></span>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="text-center" style="margin-top:36px;color:var(--muted);font-size:.92rem">Article content is illustrative — real stories and press releases can be published here.</p>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section bg-tint">
+    <div class="container container-narrow text-center">
+      <span class="eyebrow center">Stay Updated</span>
+      <h2>Keep up with Hydrosyng</h2>
+      <p style="color:var(--muted);margin-bottom:26px">Reach out to be added to company updates and announcements.</p>
+      <div class="btn-row center">
+        <a href={"mailto:" + site.email + "?subject=Newsletter%20Signup"} class="btn btn-primary btn-lg">Subscribe by Email <Icon name="send" /></a>
+      </div>
+    </div>
+  </section>
+</Base>

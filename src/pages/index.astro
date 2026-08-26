@@ -1,0 +1,220 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site.js';
+---
+<Base
+  title="Hydrosyng Oil & Gas Ltd — Reliable Energy for Nigeria"
+  description="Hydrosyng Oil & Gas Ltd (RC 1232655) is an indigenous Nigerian energy company supplying petroleum products, gas & LPG, haulage and integrated engineering & energy services nationwide."
+  current="home"
+  path="/"
+>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-media"><img src="/img/hero-refinery.jpg" alt="Petroleum storage and processing facility at dusk" /></div>
+    <div class="container">
+      <div class="hero-inner">
+        <span class="hero-badge"><span class="dot"></span> Indigenous Nigerian Energy Company · RC 1232655</span>
+        <h1>Powering Progress Through Reliable Energy</h1>
+        <p class="lead">Hydrosyng Oil &amp; Gas Ltd supplies dependable petroleum products, gas &amp; LPG and integrated energy services to homes, businesses and industry across Nigeria — delivered safely, responsibly and on time.</p>
+        <div class="btn-row">
+          <a href="/services" class="btn btn-primary btn-lg">Explore Our Services <Icon name="arrow" /></a>
+          <a href="/about" class="btn btn-ghost-light btn-lg">About the Company</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-stats">
+        <div class="stat"><strong>2014</strong><span>Incorporated in Nigeria</span></div>
+        <div class="stat"><strong>100<span class="plus">%</span></strong><span>Indigenous &amp; Nigerian-owned</span></div>
+        <div class="stat"><strong>4</strong><span>Integrated divisions</span></div>
+        <div class="stat"><strong>24/7</strong><span>Supply commitment</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="section-sm bg-tint">
+    <div class="container">
+      <p class="text-center" style="color:var(--muted); font-weight:600; letter-spacing:.05em; margin-bottom:26px; font-size:.9rem;">REGISTERED IN NIGERIA &amp; COMMITTED TO SECTOR STANDARDS</p>
+      <div class="partners reveal">
+        <span class="chip">CAC Registered · RC 1232655</span>
+        <span class="chip">CAMA 2020</span>
+        <span class="chip">NMDPRA-Regulated Sector</span>
+        <span class="chip">NCDMB Aligned</span>
+        <span class="chip">HSE-Led Operations</span>
+        <span class="chip">Quality-Assured</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / ABOUT -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src="/img/about-facility.jpg" alt="Hydrosyng energy facility" />
+          <div class="badge-float">
+            <span class="num">2014</span>
+            <small>Serving Nigeria's energy needs since incorporation</small>
+          </div>
+        </div>
+        <div class="reveal d1">
+          <span class="eyebrow">Who We Are</span>
+          <h2>An indigenous energy company built on Nigerian expertise</h2>
+          <p>Incorporated in 2014, Hydrosyng Oil &amp; Gas Ltd is a wholly indigenous energy company operating across Nigeria's downstream and energy-services value chain — from petroleum product supply and distribution to gas &amp; LPG, haulage and specialist engineering.</p>
+          <p>Our strength is local knowledge backed by disciplined, standards-driven operations. We invest in people, safety and infrastructure to deliver energy that our customers can rely on — every day.</p>
+          <ul class="check-list">
+            <li><Icon name="check-circle" /><span><strong>Reliable product supply</strong>across fuels, gas &amp; LPG and lubricants</span></li>
+            <li><Icon name="check-circle" /><span><strong>Nigerian Content champions</strong>— local jobs, local suppliers, local capacity</span></li>
+            <li><Icon name="check-circle" /><span><strong>Uncompromising on HSE</strong>with a target-zero safety culture</span></li>
+          </ul>
+          <div class="btn-row" style="margin-top:26px">
+            <a href="/about" class="btn btn-outline">More About Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVISIONS -->
+  <section class="section bg-tint">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">What We Do</span>
+        <h2>Four divisions, one dependable energy partner</h2>
+        <p>Hydrosyng delivers value across the downstream value chain, backed by a specialist engineering and energy-services arm.</p>
+      </div>
+      <div class="grid grid-4">
+        <a href="/services#fuels" class="card feature-card reveal">
+          <div class="feature-icon"><Icon name="fuel" /></div>
+          <h3>Fuels &amp; Products</h3>
+          <p>Supply and distribution of PMS, AGO and DPK to industrial, commercial and retail customers nationwide.</p>
+          <span class="arrow-link">Learn more <Icon name="arrow" /></span>
+        </a>
+        <a href="/services#gas" class="card feature-card reveal d1">
+          <div class="feature-icon"><Icon name="flame" /></div>
+          <h3>Gas &amp; LPG</h3>
+          <p>LPG and natural gas solutions for homes, businesses and industry — cleaner, more affordable energy.</p>
+          <span class="arrow-link">Learn more <Icon name="arrow" /></span>
+        </a>
+        <a href="/services#logistics" class="card feature-card reveal d2">
+          <div class="feature-icon"><Icon name="truck" /></div>
+          <h3>Haulage &amp; Logistics</h3>
+          <p>Safe bulk haulage, storage and distribution moving product where it's needed, when it's needed.</p>
+          <span class="arrow-link">Learn more <Icon name="arrow" /></span>
+        </a>
+        <a href="/services#engineering" class="card feature-card reveal d3">
+          <div class="feature-icon"><Icon name="wrench" /></div>
+          <h3>Engineering Services</h3>
+          <p>Facility construction &amp; maintenance, procurement and power solutions for the energy sector.</p>
+          <span class="arrow-link">Learn more <Icon name="arrow" /></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT BAND -->
+  <section class="section stat-band">
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="stat-item reveal"><strong>2014</strong><span>Year established</span></div>
+        <div class="stat-item reveal d1"><strong><span data-count="4">0</span></strong><span>Business divisions</span></div>
+        <div class="stat-item reveal d2"><strong><span data-count="100">0</span><span class="suffix">%</span></strong><span>Nigerian-owned</span></div>
+        <div class="stat-item reveal d3"><strong>24/7</strong><span>Supply commitment</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">Why Hydrosyng</span>
+        <h2>Energy you can rely on, delivered responsibly</h2>
+        <p>We combine deep local roots with disciplined standards to create lasting value for our customers and communities.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="value-item reveal">
+          <div class="vi-icon"><Icon name="shield" /></div>
+          <div><h3>Safety First</h3><p>A target-zero HSE culture protecting our people, customers and the environment at every site.</p></div>
+        </div>
+        <div class="value-item reveal d1">
+          <div class="vi-icon"><Icon name="check-circle" /></div>
+          <div><h3>Proven Reliability</h3><p>Dependable supply and uptime backed by robust logistics and disciplined operations.</p></div>
+        </div>
+        <div class="value-item reveal d2">
+          <div class="vi-icon"><Icon name="share" /></div>
+          <div><h3>Integrated Strength</h3><p>One partner across fuels, gas and engineering means fewer handoffs and better control.</p></div>
+        </div>
+        <div class="value-item reveal">
+          <div class="vi-icon"><Icon name="users" /></div>
+          <div><h3>Local Content</h3><p>Championing Nigerian talent, suppliers and capacity in line with NCDMB objectives.</p></div>
+        </div>
+        <div class="value-item reveal d1">
+          <div class="vi-icon"><Icon name="leaf" /></div>
+          <div><h3>Sustainability</h3><p>Promoting cleaner fuels and LPG, cutting emissions and reducing waste across operations.</p></div>
+        </div>
+        <div class="value-item reveal d2">
+          <div class="vi-icon"><Icon name="gauge" /></div>
+          <div><h3>Technical Depth</h3><p>Experienced engineers and operators applying best practice on every project.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED FOCUS -->
+  <section class="section bg-tint">
+    <div class="container">
+      <div class="section-head left" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; max-width:none;">
+        <div style="max-width:600px">
+          <span class="eyebrow">Our Focus</span>
+          <h2>What we're building across the value chain</h2>
+        </div>
+        <a href="/services" class="btn btn-outline">Explore Our Services</a>
+      </div>
+      <div class="grid grid-3">
+        <article class="card media-card reveal">
+          <div class="media"><img src="/img/station-1.jpg" alt="Fuelling at a service station" /><span class="tag">Downstream</span></div>
+          <div class="body"><h3>Fuel Marketing &amp; Distribution</h3><p>Reliable supply of PMS, AGO and DPK to industrial, commercial and retail customers.</p><a class="arrow-link" href="/services#fuels">Learn more <Icon name="arrow" /></a></div>
+        </article>
+        <article class="card media-card reveal d1">
+          <div class="media"><img src="/img/midstream.jpg" alt="Gas and LPG infrastructure" /><span class="tag">Gas &amp; LPG</span></div>
+          <div class="body"><h3>Gas &amp; LPG Solutions</h3><p>Delivering LPG and natural gas for homes, businesses and industry — cleaner, affordable energy.</p><a class="arrow-link" href="/services#gas">Learn more <Icon name="arrow" /></a></div>
+        </article>
+        <article class="card media-card reveal d2">
+          <div class="media"><img src="/img/services-power.jpg" alt="Energy and power solutions" /><span class="tag">Engineering</span></div>
+          <div class="body"><h3>Engineering &amp; Energy Services</h3><p>Facility construction, maintenance and power solutions engineered to recognised standards.</p><a class="arrow-link" href="/services#engineering">Learn more <Icon name="arrow" /></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="quote-card reveal">
+        <span class="qmark">&ldquo;</span>
+        <blockquote>Our purpose is simple — to deliver energy that Nigerians can rely on: safely, responsibly and with genuine local value at every step.</blockquote>
+        <div class="cite">
+          <span class="av">HG</span>
+          <div><strong>The Management</strong><span>Hydrosyng Oil &amp; Gas Ltd</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Let's power your next project</h2>
+        <p>Whether you need reliable fuel supply, gas &amp; LPG or specialist engineering services, our team is ready to help.</p>
+        <div class="btn-row center">
+          <a href="/contact" class="btn btn-white btn-lg">Contact Our Team</a>
+          <a href="/services" class="btn btn-ghost-light btn-lg">Browse Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

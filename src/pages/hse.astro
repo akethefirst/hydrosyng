@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base
+  title="HSE & Sustainability — Hydrosyng Oil & Gas Ltd"
+  description="Health, Safety, Environment and sustainability at Hydrosyng Oil & Gas Ltd — a target-zero safety culture protecting our people, customers, communities and the environment."
+  current="hse"
+  path="/hse"
+>
+  <PageHero
+    title="HSE & Sustainability"
+    subtitle="Safety is never optional. We protect our people, our customers and the environment at every step."
+    image="/img/banner-hse.jpg"
+    crumb="HSE"
+  />
+
+  <!-- INTRO -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal"><img src="/img/hse-1.jpg" alt="Site safety in action" /></div>
+        <div class="reveal d1">
+          <span class="eyebrow">Our Commitment</span>
+          <h2>A target-zero safety culture</h2>
+          <p>At Hydrosyng, health and safety come before everything else. We handle fuels, gas and LPG — products that demand discipline and respect — so we build safety into every process, every journey and every site.</p>
+          <p>Our goal is simple: zero harm to people and zero damage to the environment. We pursue it through training, clear procedures, the right equipment and a culture where everyone is empowered to stop unsafe work.</p>
+          <ul class="check-list">
+            <li><Icon name="check-circle" /><span><strong>People first</strong>rigorous training and competency across the team</span></li>
+            <li><Icon name="check-circle" /><span><strong>Safe operations</strong>procedures and controls for every activity</span></li>
+            <li><Icon name="check-circle" /><span><strong>Environmental care</strong>minimising emissions, spills and waste</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="section bg-tint">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">How We Deliver It</span>
+        <h2>Four pillars of our HSE approach</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="card feature-card reveal"><div class="feature-icon"><Icon name="hardhat" /></div><h3>Health &amp; Safety</h3><p>Safe systems of work, PPE and continuous training to prevent incidents.</p></div>
+        <div class="card feature-card reveal d1"><div class="feature-icon"><Icon name="leaf" /></div><h3>Environment</h3><p>Responsible handling, spill prevention and waste reduction across operations.</p></div>
+        <div class="card feature-card reveal d2"><div class="feature-icon"><Icon name="users" /></div><h3>Community</h3><p>Respecting and supporting the communities where we operate.</p></div>
+        <div class="card feature-card reveal d3"><div class="feature-icon"><Icon name="shield-check" /></div><h3>Compliance</h3><p>Operating in line with Nigerian regulatory and sector HSE requirements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">Sustainability</span>
+          <h2>Cleaner energy for the long term</h2>
+          <p>We believe reliable energy and environmental responsibility go together. By promoting LPG and cleaner fuels and by investing in efficient operations, we help our customers reduce their footprint while meeting their energy needs.</p>
+          <ul class="check-list">
+            <li><Icon name="check" /><span>Promoting LPG &amp; cleaner cooking fuels for households</span></li>
+            <li><Icon name="check" /><span>Efficient logistics to reduce fuel use and emissions</span></li>
+            <li><Icon name="check" /><span>Exploring solar &amp; renewable power solutions</span></li>
+            <li><Icon name="check" /><span>Responsible waste and resource management</span></li>
+          </ul>
+        </div>
+        <div class="split-media reverse reveal d1"><img src="/img/hse-2.jpg" alt="Cleaner energy and sustainability" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Safety and reliability, together</h2>
+        <p>Partner with a company that puts HSE at the heart of every delivery.</p>
+        <div class="btn-row center">
+          <a href="/contact" class="btn btn-white btn-lg">Talk to Us</a>
+          <a href="/about" class="btn btn-ghost-light btn-lg">About Hydrosyng</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

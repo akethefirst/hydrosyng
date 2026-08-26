@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Page Not Found — Hydrosyng Oil & Gas Ltd" description="The page you're looking for could not be found." path="/404">
+  <section class="section">
+    <div class="container container-narrow text-center">
+      <div style="font-size:clamp(4rem,14vw,8rem);font-weight:800;line-height:1;font-family:var(--font-head);background:var(--grad-accent);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:8px">404</div>
+      <span class="eyebrow center">Page Not Found</span>
+      <h1>We couldn't find that page</h1>
+      <p class="lead" style="margin:16px auto 30px;max-width:520px">The page may have moved or no longer exists. Let's get you back on track.</p>
+      <div class="btn-row center">
+        <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
+        <a href="/contact" class="btn btn-outline btn-lg">Contact Us <Icon name="arrow" /></a>
+      </div>
+    </div>
+  </section>
+</Base>

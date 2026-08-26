@@ -1,0 +1,64 @@
+---
+import { site } from '../data/site.js';
+import Icon from './Icon.astro';
+const { current = "" } = Astro.props;
+---
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <a href={"tel:" + site.phoneHref}><Icon name="phone" />{site.phoneDisplay}</a>
+      <a href={"mailto:" + site.email}><Icon name="mail" />{site.email}</a>
+      <span><Icon name="pin" />{site.addressShort}</span>
+    </div>
+    <div class="topbar-social">
+      <a href={site.socials.linkedin} aria-label="LinkedIn"><Icon name="linkedin" /></a>
+      <a href={site.socials.x} aria-label="X"><Icon name="x" /></a>
+      <a href={site.socials.facebook} aria-label="Facebook"><Icon name="facebook" /></a>
+      <a href={site.socials.instagram} aria-label="Instagram"><Icon name="instagram" /></a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="/">
+        <img src="/img/hydrosyng-logo.png" alt={site.name} data-logo height="56" />
+        <span class="brand-fallback" style="display:none">
+          <strong>{site.wordmark}</strong><span>{site.suffix}</span>
+        </span>
+      </a>
+
+      <ul class="menu">
+        <li class:list={[current === 'home' && 'current']}><a href="/">Home</a></li>
+        <li class:list={['has-drop', current === 'about' && 'current']}>
+          <a href="/about">About <Icon name="chevron" class="chev" /></a>
+          <ul class="submenu">
+            <li><a href="/about">Who We Are</a></li>
+            <li><a href="/about#leadership">Our Leadership</a></li>
+            <li><a href="/about#certifications">Certifications</a></li>
+            <li><a href="/hse">HSE &amp; Sustainability</a></li>
+          </ul>
+        </li>
+        <li class:list={['has-drop', current === 'services' && 'current']}>
+          <a href="/services">Services <Icon name="chevron" class="chev" /></a>
+          <ul class="submenu">
+            <li><a href="/services#fuels">Fuels &amp; Petroleum Products</a></li>
+            <li><a href="/services#gas">Gas &amp; LPG Solutions</a></li>
+            <li><a href="/services#logistics">Haulage &amp; Logistics</a></li>
+            <li><a href="/services#engineering">Engineering &amp; Energy Services</a></li>
+          </ul>
+        </li>
+        <li class:list={[current === 'projects' && 'current']}><a href="/projects">Projects</a></li>
+        <li class:list={[current === 'hse' && 'current']}><a href="/hse">HSE</a></li>
+        <li class:list={[current === 'careers' && 'current']}><a href="/careers">Careers</a></li>
+        <li class:list={[current === 'news' && 'current']}><a href="/news">News</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="/contact" class="btn btn-primary">Get in Touch</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,157 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site.js';
+---
+<Base
+  title="About Us — Hydrosyng Oil & Gas Ltd"
+  description="Hydrosyng Oil & Gas Ltd (RC 1232655) is an indigenous Nigerian energy company incorporated in 2014, operating across fuels, gas & LPG, logistics and engineering services."
+  current="about"
+  path="/about"
+>
+  <PageHero
+    title="About Hydrosyng"
+    subtitle="An indigenous Nigerian energy company delivering reliable products and services across the downstream value chain."
+    image="/img/banner-about.jpg"
+    crumb="About"
+  />
+
+  <!-- WHO WE ARE -->
+  <section class="section">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src="/img/about-team.jpg" alt="Hydrosyng team on site" />
+          <div class="badge-float">
+            <span class="num">RC</span>
+            <small>1232655 — incorporated in Nigeria, 2014</small>
+          </div>
+        </div>
+        <div class="reveal d1">
+          <span class="eyebrow">Who We Are</span>
+          <h2>Reliable energy, engineered responsibly</h2>
+          <p>Hydrosyng Oil &amp; Gas Ltd is a wholly indigenous Nigerian company incorporated under the Companies and Allied Matters Act in 2014 (RC 1232655). We operate across the downstream petroleum sector and energy services — supplying fuels, gas &amp; LPG, haulage and specialist engineering to customers nationwide.</p>
+          <p>From day one we have built our business on three commitments: dependable supply, uncompromising safety, and genuine local value. Those principles guide every product we move and every project we deliver.</p>
+          <ul class="check-list">
+            <li><Icon name="check-circle" /><span><strong>Downstream focus</strong>fuels, lubricants, gas &amp; LPG distribution</span></li>
+            <li><Icon name="check-circle" /><span><strong>Energy services</strong>engineering, procurement, haulage &amp; power</span></li>
+            <li><Icon name="check-circle" /><span><strong>Nationwide reach</strong>serving industry, commerce and communities</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION / VALUES -->
+  <section class="section bg-tint">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card feature-card reveal">
+          <div class="feature-icon"><Icon name="target" /></div>
+          <h3>Our Mission</h3>
+          <p>To supply reliable, responsibly-sourced energy and services that power progress for Nigerian homes, businesses and industry.</p>
+        </div>
+        <div class="card feature-card reveal d1">
+          <div class="feature-icon"><Icon name="globe" /></div>
+          <h3>Our Vision</h3>
+          <p>To be a trusted, leading indigenous energy company recognised for safety, reliability and local value creation.</p>
+        </div>
+        <div class="card feature-card reveal d2">
+          <div class="feature-icon"><Icon name="shield-check" /></div>
+          <h3>Our Values</h3>
+          <p>Safety, integrity, reliability, excellence and community — the standards behind everything we do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY / TIMELINE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">Our Journey</span>
+        <h2>Growing with Nigeria's energy needs</h2>
+        <p>A snapshot of Hydrosyng's progress since incorporation.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal"><div class="dot"></div><span class="yr">2014</span><h3>Incorporated in Nigeria</h3><p>Hydrosyng Oil &amp; Gas Ltd is registered with the Corporate Affairs Commission (RC 1232655) as a company limited by shares.</p></div>
+        <div class="tl-item reveal"><div class="dot"></div><span class="yr">Growth</span><h3>Fuels supply &amp; distribution</h3><p>Established petroleum product supply operations — PMS, AGO and DPK — for commercial and industrial customers.</p></div>
+        <div class="tl-item reveal"><div class="dot"></div><span class="yr">Expansion</span><h3>Gas, LPG &amp; logistics</h3><p>Broadened into gas &amp; LPG distribution and safe bulk haulage to serve a wider customer base.</p></div>
+        <div class="tl-item reveal"><div class="dot"></div><span class="yr">Today</span><h3>Integrated energy &amp; engineering</h3><p>Delivering fuels, gas and engineering &amp; energy services under one dependable, HSE-led organisation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section bg-tint" id="leadership">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">Our Leadership</span>
+        <h2>Experienced people, dependable delivery</h2>
+        <p>Hydrosyng is led by a team with deep experience across the Nigerian energy sector.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="leader-card reveal">
+          <div class="photo"><span class="mono">MD</span></div>
+          <h3>Managing Director / CEO</h3>
+          <div class="role">Executive Leadership</div>
+          <p class="bio">Sets company strategy and drives growth, safety and performance.</p>
+        </div>
+        <div class="leader-card reveal d1">
+          <div class="photo"><span class="mono">EX</span></div>
+          <h3>Executive Director</h3>
+          <div class="role">Operations &amp; Commercial</div>
+          <p class="bio">Oversees supply, commercial partnerships and day-to-day operations.</p>
+        </div>
+        <div class="leader-card reveal d2">
+          <div class="photo"><span class="mono">GM</span></div>
+          <h3>General Manager</h3>
+          <div class="role">Operations</div>
+          <p class="bio">Leads logistics, distribution and product delivery nationwide.</p>
+        </div>
+        <div class="leader-card reveal d3">
+          <div class="photo"><span class="mono">HS</span></div>
+          <h3>Head of HSE</h3>
+          <div class="role">Health, Safety &amp; Environment</div>
+          <p class="bio">Champions the target-zero safety culture across every site.</p>
+        </div>
+      </div>
+      <p class="text-center" style="margin-top:26px;color:var(--muted);font-size:.9rem">Leadership names and photographs can be added on request.</p>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">Certifications &amp; Compliance</span>
+        <h2>Registered, regulated and standards-driven</h2>
+        <p>We operate in line with Nigerian corporate and sector requirements.</p>
+      </div>
+      <div class="partners reveal">
+        <span class="chip">CAC Registered · RC 1232655</span>
+        <span class="chip">CAMA 2020</span>
+        <span class="chip">NMDPRA-Regulated Sector</span>
+        <span class="chip">NCDMB Aligned</span>
+        <span class="chip">HSE-Led Operations</span>
+        <span class="chip">Quality-Assured Supply</span>
+      </div>
+      <p class="text-center" style="margin-top:24px;color:var(--muted);font-size:.9rem">Company documentation and sector permits are available to partners on request.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Work with a partner you can rely on</h2>
+        <p>Talk to our team about fuels, gas &amp; LPG, logistics or engineering services for your operation.</p>
+        <div class="btn-row center">
+          <a href="/contact" class="btn btn-white btn-lg">Contact Us</a>
+          <a href="/services" class="btn btn-ghost-light btn-lg">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,62 @@
+---
+import { site } from '../data/site.js';
+import Icon from './Icon.astro';
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/img/hydrosyng-logo.png" alt={site.name} data-logo />
+        <span class="brand-fallback" style="display:none">
+          <strong>{site.wordmark}</strong><span>{site.suffix}</span>
+        </span>
+        <p>An indigenous Nigerian energy company supplying reliable petroleum products, gas &amp; LPG and integrated engineering &amp; energy services — safely and responsibly.</p>
+        <div class="footer-social">
+          <a href={site.socials.linkedin} aria-label="LinkedIn"><Icon name="linkedin" /></a>
+          <a href={site.socials.x} aria-label="X"><Icon name="x" /></a>
+          <a href={site.socials.facebook} aria-label="Facebook"><Icon name="facebook" /></a>
+          <a href={site.socials.instagram} aria-label="Instagram"><Icon name="instagram" /></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/about#leadership">Leadership</a></li>
+          <li><a href="/hse">HSE &amp; Sustainability</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/news">News &amp; Media</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services#fuels">Fuels &amp; Products</a></li>
+          <li><a href="/services#gas">Gas &amp; LPG</a></li>
+          <li><a href="/services#logistics">Haulage &amp; Logistics</a></li>
+          <li><a href="/services#engineering">Engineering Services</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul class="footer-contact">
+          <li><Icon name="pin" /><span>{site.addressFull}</span></li>
+          <li><Icon name="phone" /><a href={"tel:" + site.phoneHref}>{site.phoneDisplay}</a></li>
+          <li><Icon name="mail" /><a href={"mailto:" + site.email}>{site.email}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> {site.name}. {site.rc}. All rights reserved.</span>
+      <div class="legal">
+        <a href="/hse">HSE Policy</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>

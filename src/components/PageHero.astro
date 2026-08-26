@@ -1,0 +1,14 @@
+---
+interface Props { title: string; subtitle?: string; image: string; crumb: string; }
+const { title, subtitle, image, crumb } = Astro.props;
+---
+<section class="page-hero">
+  <div class="page-hero-media"><img src={image} alt="" loading="eager" /></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="/">Home</a><span class="sep">/</span><span>{crumb}</span></div>
+      <h1>{title}</h1>
+      {subtitle && <p>{subtitle}</p>}
+    </div>
+  </div>
+</section>

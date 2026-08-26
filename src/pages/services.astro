@@ -1,0 +1,144 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base
+  title="Our Services — Hydrosyng Oil & Gas Ltd"
+  description="Fuels & petroleum products, gas & LPG, haulage & logistics, and engineering & energy services from Hydrosyng Oil & Gas Ltd — one integrated partner across Nigeria's downstream sector."
+  current="services"
+  path="/services"
+>
+  <PageHero
+    title="Our Services"
+    subtitle="A single, integrated partner across fuels, gas, logistics and engineering — delivered safely and reliably."
+    image="/img/banner-services.jpg"
+    crumb="Services"
+  />
+
+  <!-- OVERVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center">What We Offer</span>
+        <h2>Dependable energy, end to end</h2>
+        <p>Explore each of our four divisions below.</p>
+      </div>
+      <div class="grid grid-4">
+        <a href="#fuels" class="card feature-card reveal"><div class="feature-icon"><Icon name="fuel" /></div><h3>Fuels &amp; Products</h3><p>PMS, AGO &amp; DPK supply</p></a>
+        <a href="#gas" class="card feature-card reveal d1"><div class="feature-icon"><Icon name="flame" /></div><h3>Gas &amp; LPG</h3><p>Clean, affordable energy</p></a>
+        <a href="#logistics" class="card feature-card reveal d2"><div class="feature-icon"><Icon name="truck" /></div><h3>Haulage &amp; Logistics</h3><p>Safe bulk distribution</p></a>
+        <a href="#engineering" class="card feature-card reveal d3"><div class="feature-icon"><Icon name="wrench" /></div><h3>Engineering</h3><p>Facilities &amp; power</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUELS -->
+  <section class="section bg-tint" id="fuels">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal"><img src="/img/downstream.jpg" alt="Fuel tanker distribution" /></div>
+        <div class="reveal d1">
+          <span class="eyebrow">01 — Downstream</span>
+          <h2>Fuels &amp; Petroleum Products</h2>
+          <p>We supply, distribute and retail refined petroleum products nationwide — keeping industry, fleets and motorists moving with dependable, quality-assured fuel.</p>
+          <ul class="check-list">
+            <li><Icon name="check" /><span>PMS (petrol), AGO (diesel) &amp; DPK (kerosene) bulk supply</span></li>
+            <li><Icon name="check" /><span>Distribution to industrial, commercial &amp; retail customers</span></li>
+            <li><Icon name="check" /><span>Branded filling-station supply &amp; retail partnerships</span></li>
+            <li><Icon name="check" /><span>Lubricants &amp; specialty petroleum products</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAS -->
+  <section class="section" id="gas">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">02 — Gas &amp; LPG</span>
+          <h2>Gas &amp; LPG Solutions</h2>
+          <p>We deliver LPG and natural gas for households, businesses and industry — supporting Nigeria's shift to cleaner, more affordable and more reliable energy.</p>
+          <ul class="check-list">
+            <li><Icon name="check" /><span>LPG (cooking gas) supply, bottling &amp; distribution</span></li>
+            <li><Icon name="check" /><span>Bulk LPG for commercial &amp; industrial users</span></li>
+            <li><Icon name="check" /><span>Natural gas supply solutions</span></li>
+            <li><Icon name="check" /><span>Safety-first handling, storage &amp; delivery</span></li>
+          </ul>
+        </div>
+        <div class="split-media reverse reveal d1"><img src="/img/midstream.jpg" alt="Gas and LPG infrastructure" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGISTICS -->
+  <section class="section bg-tint" id="logistics">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal"><img src="/img/services-marine.jpg" alt="Haulage and logistics operations" /></div>
+        <div class="reveal d1">
+          <span class="eyebrow">03 — Logistics</span>
+          <h2>Haulage, Storage &amp; Logistics</h2>
+          <p>Our logistics operations move product safely and on schedule — from storage and loading to last-mile delivery — with disciplined fleet management and HSE controls.</p>
+          <ul class="check-list">
+            <li><Icon name="check" /><span>Bulk petroleum &amp; LPG haulage</span></li>
+            <li><Icon name="check" /><span>Product storage &amp; depot handling</span></li>
+            <li><Icon name="check" /><span>Fleet management &amp; route planning</span></li>
+            <li><Icon name="check" /><span>Safety-compliant loading &amp; delivery</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING -->
+  <section class="section" id="engineering">
+    <div class="container">
+      <div class="split">
+        <div class="reveal">
+          <span class="eyebrow">04 — Energy Services</span>
+          <h2>Engineering &amp; Energy Services</h2>
+          <p>Our engineering arm supports the wider sector with technical, procurement, power and maintenance capabilities — delivered by experienced Nigerian teams to recognised standards.</p>
+          <ul class="check-list">
+            <li><Icon name="check" /><span>Facility construction, maintenance &amp; upgrades</span></li>
+            <li><Icon name="check" /><span>Procurement &amp; equipment supply</span></li>
+            <li><Icon name="check" /><span>Power &amp; energy solutions, including solar</span></li>
+            <li><Icon name="check" /><span>Technical support &amp; project management</span></li>
+          </ul>
+        </div>
+        <div class="split-media reverse reveal d1"><img src="/img/services-eng.jpg" alt="Engineering and energy services" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section stat-band">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="eyebrow center" style="color:#fff">How We Work</span>
+        <h2 style="color:#fff">A disciplined delivery approach</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="text-center reveal"><div class="feature-icon" style="background:rgba(255,255,255,.14);color:#fff;margin:0 auto 18px"><strong style="font-size:1.3rem">01</strong></div><h3 style="color:#fff">Understand</h3><p style="color:rgba(255,255,255,.8);font-size:.92rem">We listen, assess requirements and define clear objectives with you.</p></div>
+        <div class="text-center reveal d1"><div class="feature-icon" style="background:rgba(255,255,255,.14);color:#fff;margin:0 auto 18px"><strong style="font-size:1.3rem">02</strong></div><h3 style="color:#fff">Plan</h3><p style="color:rgba(255,255,255,.8);font-size:.92rem">Operations, HSE and commercial teams design the optimal solution.</p></div>
+        <div class="text-center reveal d2"><div class="feature-icon" style="background:rgba(255,255,255,.14);color:#fff;margin:0 auto 18px"><strong style="font-size:1.3rem">03</strong></div><h3 style="color:#fff">Deliver</h3><p style="color:rgba(255,255,255,.8);font-size:.92rem">Safe, on-time execution with rigorous quality control throughout.</p></div>
+        <div class="text-center reveal d3"><div class="feature-icon" style="background:rgba(255,255,255,.14);color:#fff;margin:0 auto 18px"><strong style="font-size:1.3rem">04</strong></div><h3 style="color:#fff">Support</h3><p style="color:rgba(255,255,255,.8);font-size:.92rem">Ongoing supply, maintenance and account management you can rely on.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Need a tailored energy solution?</h2>
+        <p>Tell us what you need and our team will design the right approach for your operation.</p>
+        <div class="btn-row center">
+          <a href="/contact" class="btn btn-white btn-lg">Request a Consultation</a>
+          <a href="/projects" class="btn btn-ghost-light btn-lg">See Our Projects</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { site } from '../data/site.js';
+
+interface Props {
+  title: string;
+  description?: string;
+  current?: string;
+  path?: string;
+}
+const {
+  title,
+  description = "Hydrosyng Oil & Gas Ltd is an indigenous Nigerian energy company delivering reliable petroleum products, gas & LPG, haulage and integrated engineering & energy services.",
+  current = "",
+  path = "/"
+} = Astro.props;
+
+const canonical = site.url + (path === "/" ? "/" : path);
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  legalName: site.name,
+  url: site.url,
+  logo: site.url + "/img/hydrosyng-logo.png",
+  slogan: site.tagline,
+  email: site.email,
+  foundingDate: String(site.incorporated),
+  address: { "@type": "PostalAddress", addressLocality: "Abuja", addressRegion: "FCT", addressCountry: "NG" },
+  identifier: site.rc
+};
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="theme-color" content="#0a173d" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={site.url + "/img/hydrosyng-logo.png"} />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+</head>
+<body>
+  <SiteHeader current={current} />
+  <main>
+    <slot />
+  </main>
+  <SiteFooter />
+  <script>
+    import '../scripts/main.js';
+  </script>
+</body>
+</html>
