@@ -101,10 +101,16 @@ roles, no names), projects, news posts and open roles.
 
 ## Images
 
-`public/img/` currently holds **real stock photographs** as placeholders (not
-AI-generated). Swap any of them for your own Hydrosyng photos by replacing the
-file with the same name (e.g. `hero-refinery.jpg`, `banner-services.jpg`,
-`project-1.jpg`, …). Keep similar dimensions for the best fit.
+`public/img/` holds **real, commercially-licensed stock photographs** sourced
+from [Wikimedia Commons](https://commons.wikimedia.org) (not AI-generated). Most
+are **CC BY / CC BY-SA**, so if you keep them on the live site you must keep
+attribution — every image's author, license and source page is listed in
+[`CREDITS.md`](CREDITS.md).
+
+**Recommended:** replace them with Hydrosyng's own photos (facilities, stations,
+trucks, team) by dropping your files into `public/img/` using the same filenames
+(e.g. `hero-refinery.jpg`, `banner-services.jpg`, `project-1.jpg`). Your own
+photos are more authentic and remove any attribution requirement.
 
 ---
 
