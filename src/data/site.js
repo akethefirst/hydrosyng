@@ -13,14 +13,16 @@ export const site = {
   url: "https://hydrosyng.com.ng",
 
   email: "info@hydrosyng.com.ng",
-  phoneDisplay: "+234 000 000 0000",      // PLACEHOLDER — add the real company line
-  phoneHref: "+2340000000000",            // PLACEHOLDER
+  phoneDisplay: "+234 802 606 1092",
+  phoneHref: "+2348026061092",
 
-  addressShort: "Head Office: Abuja, FCT",
-  addressFull: "Head Office, Central Business District, Abuja, FCT, Nigeria", // PLACEHOLDER — confirm registered office
+  addressShort: "Head Office: EFAB City Estate, Abuja",
+  addressFull: "No. 14, Road 15, EFAB City Estate, Abuja, FCT, Nigeria", // registered office (CAC status report)
 
   rc: "RC 1232655",                       // real — from Certificate of Incorporation
   incorporated: 2014,                     // real — incorporated 22 Dec 2014, Abuja
+  companyType: "Private Company Limited by Shares",
+  shareCapital: "₦1,000,000",
 
   // Optional Google Maps embed src (leave empty to hide the map). PLACEHOLDER
   mapEmbed: "",
