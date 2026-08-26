@@ -35,6 +35,31 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ---------- Hero slider ---------- */
+  var slider = document.querySelector(".hero-slider");
+  if (slider) {
+    var hsSlides = [].slice.call(slider.querySelectorAll(".hs-slide"));
+    var hsDots = [].slice.call(slider.querySelectorAll(".hs-dots button"));
+    var hsIdx = Math.max(0, hsSlides.findIndex(function (s) { return s.classList.contains("is-active"); }));
+    var hsTimer = null;
+    var hsReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var hsGo = function (n) {
+      hsIdx = (n + hsSlides.length) % hsSlides.length;
+      hsSlides.forEach(function (s, i) { s.classList.toggle("is-active", i === hsIdx); });
+      hsDots.forEach(function (d, i) { d.classList.toggle("is-active", i === hsIdx); });
+    };
+    var hsStop = function () { if (hsTimer) { clearInterval(hsTimer); hsTimer = null; } };
+    var hsStart = function () { if (hsReduce || hsSlides.length < 2) return; hsStop(); hsTimer = setInterval(function () { hsGo(hsIdx + 1); }, 6000); };
+    var hsNext = slider.querySelector(".hs-arrow.next");
+    var hsPrev = slider.querySelector(".hs-arrow.prev");
+    if (hsNext) hsNext.addEventListener("click", function () { hsGo(hsIdx + 1); hsStart(); });
+    if (hsPrev) hsPrev.addEventListener("click", function () { hsGo(hsIdx - 1); hsStart(); });
+    hsDots.forEach(function (d, i) { d.addEventListener("click", function () { hsGo(i); hsStart(); }); });
+    slider.addEventListener("mouseenter", hsStop);
+    slider.addEventListener("mouseleave", hsStart);
+    hsStart();
+  }
+
   // Tracks whether IntersectionObserver actually fires; a failsafe reveals
   // everything if it never does, so no section can stay stuck invisible.
   var ioActivity = false;

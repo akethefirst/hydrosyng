@@ -9,27 +9,63 @@ import { site } from '../data/site.js';
   current="home"
   path="/"
 >
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-media"><img src="/img/hero-refinery.jpg" alt="Petroleum storage and processing facility at dusk" /></div>
-    <div class="container">
-      <div class="hero-inner">
-        <span class="hero-badge"><span class="dot"></span> Indigenous Nigerian Energy Company · RC 1232655</span>
-        <h1>Powering Progress Through Reliable Energy</h1>
-        <p class="lead">Hydrosyng Oil &amp; Gas Ltd supplies dependable petroleum products, gas &amp; LPG and integrated energy services to homes, businesses and industry across Nigeria — delivered safely, responsibly and on time.</p>
-        <div class="btn-row">
-          <a href="/services" class="btn btn-primary btn-lg">Explore Our Services <Icon name="arrow" /></a>
-          <a href="/about" class="btn btn-ghost-light btn-lg">About the Company</a>
+  <!-- HERO SLIDER -->
+  <section class="hero-slider" aria-label="Featured highlights" aria-roledescription="carousel">
+    <div class="hs-track">
+      <div class="hs-slide is-active">
+        <div class="hs-bg"><img src="/img/hero-refinery.jpg" alt="" fetchpriority="high" /></div>
+        <div class="container">
+          <div class="hs-inner">
+            <span class="hs-kicker">Reliable Energy Supply</span>
+            <h1>Powering Progress Through Reliable Energy</h1>
+            <p class="lead">Hydrosyng Oil &amp; Gas Ltd supplies dependable petroleum products, gas &amp; LPG and energy services to homes, businesses and industry across Nigeria.</p>
+            <div class="btn-row">
+              <a href="/services" class="btn btn-primary btn-lg">Explore Our Services <Icon name="arrow" /></a>
+              <a href="/about" class="btn btn-ghost-light btn-lg">About the Company</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hs-slide">
+        <div class="hs-bg"><img src="/img/hero-pipeline.jpg" alt="" decoding="async" /></div>
+        <div class="container">
+          <div class="hs-inner">
+            <span class="hs-kicker">Fuels · Gas · LPG</span>
+            <h1>Fuels, Gas &amp; LPG — Delivered Safely</h1>
+            <p class="lead">From PMS, AGO and DPK to LPG and natural gas, we keep industry, fleets and homes reliably supplied — safely and on time, nationwide.</p>
+            <div class="btn-row">
+              <a href="/services" class="btn btn-primary btn-lg">Our Services <Icon name="arrow" /></a>
+              <a href="/contact" class="btn btn-ghost-light btn-lg">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hs-slide">
+        <div class="hs-bg"><img src="/img/hero-offshore.jpg" alt="" decoding="async" /></div>
+        <div class="container">
+          <div class="hs-inner">
+            <span class="hs-kicker">Engineering &amp; Energy Services</span>
+            <h1>Integrated Energy &amp; Engineering</h1>
+            <p class="lead">Haulage and logistics plus specialist engineering, procurement and power solutions — one dependable partner, engineered to standard.</p>
+            <div class="btn-row">
+              <a href="/services#engineering" class="btn btn-primary btn-lg">Engineering Services <Icon name="arrow" /></a>
+              <a href="/contact" class="btn btn-ghost-light btn-lg">Contact Us</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="hero-stats">
-        <div class="stat"><strong>2014</strong><span>Incorporated in Nigeria</span></div>
-        <div class="stat"><strong>100<span class="plus">%</span></strong><span>Indigenous &amp; Nigerian-owned</span></div>
-        <div class="stat"><strong>4</strong><span>Integrated divisions</span></div>
-        <div class="stat"><strong>24/7</strong><span>Supply commitment</span></div>
-      </div>
+
+    <button class="hs-arrow prev" type="button" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button class="hs-arrow next" type="button" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+    <div class="hs-dots" aria-label="Choose slide">
+      <button class="is-active" type="button" aria-label="Slide 1"></button>
+      <button type="button" aria-label="Slide 2"></button>
+      <button type="button" aria-label="Slide 3"></button>
     </div>
   </section>
 
@@ -186,20 +222,6 @@ import { site } from '../data/site.js';
           <div class="media"><img src="/img/services-power.jpg" alt="Energy and power solutions" /><span class="tag">Engineering</span></div>
           <div class="body"><h3>Engineering &amp; Energy Services</h3><p>Facility construction, maintenance and power solutions engineered to recognised standards.</p><a class="arrow-link" href="/services#engineering">Learn more <Icon name="arrow" /></a></div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIAL -->
-  <section class="section">
-    <div class="container container-narrow">
-      <div class="quote-card reveal">
-        <span class="qmark">&ldquo;</span>
-        <blockquote>Our purpose is simple — to deliver energy that Nigerians can rely on: safely, responsibly and with genuine local value at every step.</blockquote>
-        <div class="cite">
-          <span class="av">HG</span>
-          <div><strong>The Management</strong><span>Hydrosyng Oil &amp; Gas Ltd</span></div>
-        </div>
       </div>
     </div>
   </section>
