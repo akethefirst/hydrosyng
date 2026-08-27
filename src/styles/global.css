@@ -282,13 +282,13 @@ body.nav-open .nav-toggle span::after { top: 0; transform: rotate(-45deg); }
 }
 
 /* page hero (inner pages) */
-.page-hero { position: relative; color: #fff; overflow: hidden; background: var(--brand-800); }
+.page-hero { position: relative; color: #fff; overflow: hidden; background: #060e26; }
 .page-hero-media { position: absolute; inset: 0; z-index: 0; }
-.page-hero-media img { width: 100%; height: 100%; object-fit: cover; }
-.page-hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(10,23,61,.92), rgba(21,44,120,.72)); }
-.page-hero-inner { position: relative; z-index: 2; padding: clamp(70px, 9vw, 116px) 0; }
-.page-hero h1 { color: #fff; margin-bottom: 14px; }
-.page-hero p { color: rgba(255,255,255,.85); max-width: 620px; font-size: 1.12rem; margin: 0; }
+.page-hero-media img { width: 100%; height: 100%; object-fit: cover; animation: kenburns 20s ease-out both; }
+.page-hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,14,38,.45) 0%, rgba(6,14,38,.4) 45%, rgba(6,14,38,.93) 100%), linear-gradient(100deg, rgba(6,14,38,.72), rgba(6,14,38,.25)); }
+.page-hero-inner { position: relative; z-index: 2; padding: clamp(120px, 17vw, 232px) 0 clamp(56px, 8vw, 92px); }
+.page-hero h1 { color: #fff; font-size: clamp(2.6rem, 6vw, 4.4rem); letter-spacing: -.02em; line-height: 1.05; margin-bottom: 18px; max-width: 18ch; }
+.page-hero p { color: rgba(255,255,255,.85); max-width: 640px; font-size: clamp(1.05rem, 1.6vw, 1.3rem); margin: 0; }
 .breadcrumb { display: flex; gap: 10px; align-items: center; font-size: .88rem; color: rgba(255,255,255,.7); margin-bottom: 20px; }
 .breadcrumb a { color: rgba(255,255,255,.7); }
 .breadcrumb a:hover { color: #fff; }
@@ -337,7 +337,7 @@ a.card { color: inherit; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
 .split.reverse .split-media { order: 2; }
 .split-media { position: relative; }
-.split-media img { border-radius: var(--radius-lg); box-shadow: none; border: 1px solid var(--line); width: 100%; aspect-ratio: 4/3.2; object-fit: cover; }
+.split-media img { border-radius: 4px; box-shadow: none; width: 100%; aspect-ratio: 4/3.6; object-fit: cover; }
 .split-media .badge-float {
   position: absolute; bottom: -26px; right: -10px; background: #fff; border-radius: var(--radius);
   box-shadow: var(--shadow); border: 1px solid var(--line); padding: 20px 24px; display: flex; align-items: center; gap: 16px; max-width: 260px;
@@ -357,7 +357,7 @@ a.card { color: inherit; }
 .stat-band::before { content: none; }
 .stat-band .grid { position: relative; }
 .stat-item { text-align: center; }
-.stat-item strong { display: block; font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; font-family: var(--font-head); line-height: 1; color: #fff; }
+.stat-item strong { display: block; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 800; font-family: var(--font-head); line-height: 1; letter-spacing: -.02em; color: #fff; }
 .stat-item strong .suffix { color: var(--spark); }
 .stat-item > span { color: rgba(255,255,255,.78); font-size: .98rem; margin-top: 8px; display: block; }
 .stat-item strong span { font-size: inherit; } /* keep count number + % suffix at the large heading size */
@@ -405,9 +405,9 @@ a.card { color: inherit; }
 .quote-card .cite span { font-size: .88rem; color: var(--muted); }
 
 /* CTA band */
-.cta-band { position: relative; overflow: hidden; border-radius: var(--radius-lg); background: var(--brand-800); color: #fff; padding: clamp(44px, 6vw, 76px); text-align: center; border-left: 4px solid var(--accent); }
+.cta-band { position: relative; overflow: hidden; border-radius: var(--radius-lg); background: var(--brand-900); color: #fff; padding: clamp(52px, 8vw, 92px); text-align: center; border-left: 4px solid var(--accent); }
 .cta-band::after { content: none; }
-.cta-band h2 { color: #fff; position: relative; }
+.cta-band h2 { color: #fff; position: relative; font-size: clamp(1.9rem, 3.6vw, 2.9rem); }
 .cta-band p { color: rgba(255,255,255,.85); max-width: 560px; margin: 0 auto 30px; position: relative; }
 .cta-band .btn-row { position: relative; }
 
@@ -614,5 +614,21 @@ a.card { color: inherit; }
   .hx-cta-actions { width: 100%; }
   .hx-cta-actions .btn { flex: 1 1 auto; }
 }
+
+/* =====================================================================
+   CINEMATIC (inner pages, Direction A) — full-bleed image bands + motion
+   ===================================================================== */
+@keyframes kenburns { from { transform: scale(1.09); } to { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .page-hero-media img, .cin-band-media img { animation: none !important; } }
+
+.cin-band { position: relative; color: #fff; overflow: hidden; background: #060e26; }
+.cin-band-media { position: absolute; inset: 0; z-index: 0; }
+.cin-band-media img { width: 100%; height: 100%; object-fit: cover; }
+.cin-band-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,14,38,.93) 0%, rgba(6,14,38,.72) 46%, rgba(6,14,38,.3) 100%); }
+.cin-band-inner { position: relative; z-index: 2; max-width: 660px; padding: clamp(84px, 12vw, 158px) 0; }
+.cin-eyebrow { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--spark); margin-bottom: 16px; }
+.cin-band h2 { color: #fff; font-size: clamp(1.9rem, 3.9vw, 3.1rem); line-height: 1.08; letter-spacing: -.01em; margin-bottom: 16px; }
+.cin-band p { color: rgba(255,255,255,.85); font-size: 1.12rem; margin: 0 0 26px; }
+.cin-band p:last-child { margin-bottom: 0; }
 
 ::selection { background: var(--accent); color: #fff; }
