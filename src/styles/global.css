@@ -471,7 +471,7 @@ a.card { color: inherit; }
 .site-footer { background: var(--brand-900); color: rgba(255,255,255,.68); position: relative; overflow: hidden; }
 .site-footer::before { content: none; }
 .footer-top { position: relative; padding: clamp(56px, 7vw, 88px) 0 48px; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.3fr; gap: 44px; }
-.footer-brand img { height: 54px; margin-bottom: 20px; background: #fff; padding: 11px 15px; border-radius: 12px; box-shadow: 0 6px 18px -8px rgba(0,0,0,.5); }
+.footer-brand img { height: 65px; margin-bottom: 20px; background: #fff; padding: 11px 15px; border-radius: 12px; box-shadow: 0 6px 18px -8px rgba(0,0,0,.5); }
 .footer-brand .brand-fallback strong { color: #fff; }
 .footer-brand .brand-fallback span { color: var(--accent); }
 .footer-brand p { font-size: .95rem; line-height: 1.7; margin-bottom: 22px; max-width: 340px; }
